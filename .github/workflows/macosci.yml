@@ -32,4 +32,5 @@ jobs:
           path: "tests/requirements.txt"
           update-pip: "false"
           update-setuptools: "false"
+          update-packaging: "false"
           update-wheel: "false"

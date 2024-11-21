@@ -41,7 +41,7 @@ steps:
 
 ### Toggle `pip`, `setuptools`, and `wheel` installs/updates off
 
-The `pip`, `setuptools`, and `wheel` install/updates can be toggled off in your configuration. Use one or more of the `update-pip`, `update-setuptools`, and `update-wheel` settings with a boolean string to customize the default behavior:
+The `pip`, `setuptools`, `packaging`, and `wheel` install/updates can be toggled off in your configuration. Use one or more of the `update-pip`, `update-setuptools`, `update-packaging`, and `update-wheel` settings with a boolean string to customize the default behavior:
 
 ```yaml
 steps:
@@ -51,6 +51,7 @@ steps:
     with:
       update-pip: "false"
       update-setuptools: "false"
+      update-packaging: "false"
       update-wheel: "false"
 ```
 
@@ -65,6 +66,10 @@ steps:
 **Optional** A boolean string indicating that a `pip` package update should occur before the dependency installation. Options: [`"true"`, `"false"`].  Default=`"true"`
 
 ### `update-setuptools`
+
+**Optional** A boolean string indicating that a `pip` package update should occur before the dependency installation. Options: [`"true"`, `"false"`].  Default=`"true"`
+
+### `update-packaging`
 
 **Optional** A boolean string indicating that a `setuptools` package update should occur before the dependency installation. Options: [`"true"`, `"false"`].  Default=`"true"`
 

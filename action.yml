@@ -13,6 +13,10 @@ inputs:
     description: "Boolean for setuptools install/upgrade prior to the dependency installation (default='true')"
     required: false
     default: "true" # options "true", "false"
+  update-packaging:
+    description: "Boolean for packaging install/upgrade prior to the dependency installation (default='true')"
+    required: false
+    default: "true" # options "true", "false"
   update-wheel:
     description: "Boolean for wheel install/upgrade prior to the dependency installation (default='true')"
     required: false

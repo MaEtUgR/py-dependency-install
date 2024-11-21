@@ -5,6 +5,7 @@ async function run() {
   const requirementsPath = core.getInput("path");
   const updatePip = core.getInput("update-pip");
   const updateSetuptools = core.getInput("update-setuptools");
+  const updatePackaging = core.getInput("update-packaging");
   const updateWheel = core.getInput("update-wheel");
 
   // ====================
@@ -20,6 +21,11 @@ async function run() {
     if (updateSetuptools === "true") {
       console.log("[*] Updating setuptools package...");
       await exec.exec("python -m pip install --upgrade setuptools");
+    }
+    // update packaging
+    if (updateSetuptools === "true") {
+      console.log("[*] Updating packaging package...");
+      await exec.exec("python -m pip install --upgrade packaging");
     }
     // update pip
     if (updatePip === "true") {
